@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio de Sesión</title>
+  <link rel="stylesheet" href="Inicio.css" />
+</head>
+<body>
+  <div class="contenedor">
+    <img src="../img/logo.jpg" alt="Logo" class="logo" />
+    <h2>Inicio de Sesión</h2>
+
+    <!-- LOGIN -->
+    <form id="loginForm">
+      <input type="text" id="usuario" placeholder="Usuario" required />
+      <input type="password" id="contrasena" placeholder="Contraseña" required />
+      <button type="submit">Ingresar</button>
+    </form>
+
+    <div class="mensaje" id="mensaje"></div>
+
+    <!-- Registro único con selector de rol -->
+    <div style="margin-top:14px; display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+      <select id="rolRegistro">
+        <option value="alumno">Alumno</option>
+        <option value="maestro">Maestro</option>
+      </select>
+      <button id="btnRegistrar" type="button">Registrar</button>
+      
+    </div>
+
+    <!-- CREAR NUEVO USUARIO (oculto por defecto) -->
+    <div id="crearUsuarioBox" style="display:none; margin-top:14px;">
+      <h3 style="margin:10px 0;">Crear usuario</h3>
+      <form id="formCrearUsuario">
+        <input type="email" id="nuevoUsuario" placeholder="Correo (usuario)" required />
+        <input type="password" id="nuevaContrasena" placeholder="Contraseña" required />
+        <select id="nuevoRol">
+          <option value="alumno">Alumno</option>
+          <option value="maestro">Maestro</option>
+          <option value="admin">Admin</option>
+        </select>
+        <button type="submit">Crear</button>
+      </form>
+      <div class="mensaje" id="msgCrearUsuario"></div>
+    </div>
+  </div>
+
+  <script src="Inicio.js"></script>
+</body>
+</html>

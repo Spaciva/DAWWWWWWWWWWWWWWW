@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grados - Parvularia</title>
+    <link rel="stylesheet" href="Ciclo02.css">
+</head>
+<body>
+
+<div class="header">
+    <div class="logo-container">
+        <img src="/img/logo.jpg" alt="Logo de la Escuela">
+        <h1>C.E Caserio Bethel Canton Tacanagua</h1>
+    </div>
+</div>
+
+<div class="container">
+    <a href="../segundoc.html">
+        <button class="button secondary">Regresar</button>
+    </a>
+
+    <div class="grade-section">
+        <h2 id="titulo-grado">Grado: [Nombre del Grado]</h2>
+
+        <div class="activity-input">
+            <label for="activity">Actividad:</label>
+            <input type="text" id="activity" placeholder="Nombre de la actividad">
+            <button class="button" onclick="agregarActividad()">Agregar Actividad</button>
+        </div>
+
+        <table class="student-table" id="studentTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre Completo</th>
+                    <th>Promedio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Se llenará dinámicamente -->
+            </tbody>
+        </table>
+
+        <div class="actions">
+            <button class="button" onclick="guardarTodasNotas()">Guardar Todas las Notas</button>
+            <button class="button" onclick="actualizarNotas()">Actualizar Notas</button>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+</div>
+
+<script src="Ciclo02.js"></script>
+</body>
+</html>

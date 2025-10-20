@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro</title>
+  <link rel="stylesheet" href="registrar.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Registro</h1>
+
+    <!-- Botón: volver al login -->
+    <div style="margin: 8px 0 16px;">
+      <div style="margin: 8px 0 16px;">
+  <button type="button" id="btnVolverLogin">Volver al inicio de sesión</button>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const b = document.getElementById('btnVolverLogin');
+    b?.addEventListener('click', () => {
+      window.location.href = '/InicioSesion/Inicio.html';
+    });
+  });
+</script>
+
+    </div>
+
+    <!-- Rol (controla qué sección se muestra) -->
+    <label for="rol"><strong>Rol:</strong></label>
+    <select id="rol">
+      <option value="alumno">Alumno</option>
+      <option value="maestro">Maestro</option>
+    </select>
+
+    <form id="registrationForm">
+      <!-- =======================
+           SECCIÓN ALUMNO
+      ======================== -->
+      <div id="seccionAlumno">
+        <h2>Datos del Estudiante</h2>
+
+        <label for="nombre_estudiante">Nombre:</label>
+        <input type="text" id="nombre_estudiante" required />
+
+        <label for="apellido_estudiante">Apellido:</label>
+        <input type="text" id="apellido_estudiante" required />
+
+        <label for="edad_estudiante">Edad:</label>
+        <input type="number" id="edad_estudiante" min="1" max="99" required />
+
+        <label for="fechaNac_estudiante">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNac_estudiante" required />
+
+        <label for="genero">Género:</label>
+        <select id="genero" required>
+          <option value="">Seleccione…</option>
+          <option value="Hombre">Hombre</option>
+          <option value="Mujer">Mujer</option>
+        </select>
+
+        <label for="direccion_estudiante">Dirección:</label>
+        <input type="text" id="direccion_estudiante" required />
+<label for="carnet">Carnet:</label>
+<input type="text" id="carnet" />
+
+        <label for="grado">Grado:</label>
+        <select id="grado" required>
+          <option value="">Seleccione…</option>
+          <option value="Kinder">Kinder</option>
+          <option value="Parvularia">Parvularia</option>
+          <option value="Primero">Primero</option>
+          <option value="Segundo">Segundo</option>
+          <option value="Tercero">Tercero</option>
+          <option value="Cuarto">Cuarto</option>
+          <option value="Quinto">Quinto</option>
+          <option value="Sexto">Sexto</option>
+        </select>
+
+        <label for="discapacidad">¿Tiene discapacidad?</label>
+        <select id="discapacidad" required>
+          <option value="No">No</option>
+          <option value="Sí">Sí</option>
+        </select>
+
+        <div id="disabilityOptions" style="display:none;">
+          <label for="tipoDiscapacidad">Tipo de Discapacidad:</label>
+          <select id="tipoDiscapacidad">
+            <option value="">Seleccione…</option>
+            <option value="Visual">Visual</option>
+            <option value="Auditiva">Auditiva</option>
+            <option value="Otra">Otra</option>
+          </select>
+        </div>
+
+        <h2>Datos del Responsable</h2>
+
+        <label for="responsable">Parentesco:</label>
+        <select id="responsable" required>
+          <option value="">Seleccione…</option>
+          <option value="Padre">Padre</option>
+          <option value="Madre">Madre</option>
+          <option value="Responsable">Responsable</option>
+        </select>
+
+        <label for="nombre_responsable">Nombre:</label>
+        <input type="text" id="nombre_responsable" required />
+
+        <label for="apellido_responsable">Apellido:</label>
+        <input type="text" id="apellido_responsable" required />
+
+        <label for="direccion_responsable">Dirección:</label>
+        <input type="text" id="direccion_responsable" required />
+
+        <label for="dui">Número de DUI (ej: 00000000-0):</label>
+        <input type="text" id="dui" pattern="^\d{8}-\d{1}$" required title="Formato: 00000000-0" />
+
+        <label for="telefono">Teléfono (ej: 7777-8888):</label>
+        <input type="text" id="telefono" pattern="^\d{4}-\d{4}$" required title="Formato: 7777-8888" />
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" required title="example@mail.com" />
+
+        <label for="ocupacion">Ocupación:</label>
+        <input type="text" id="ocupacion" required />
+      </div>
+
+      <!-- =======================
+           SECCIÓN MAESTRO
+      ======================== -->
+      <div id="seccionMaestro" style="display:none;">
+        <h2>Datos del Docente</h2>
+
+        <label for="nombre_maestro">Nombre:</label>
+        <input type="text" id="nombre_maestro" required />
+
+        <label for="apellido_maestro">Apellido:</label>
+        <input type="text" id="apellido_maestro" required />
+
+        <label for="dui_maestro">DUI (ej: 00000000-0):</label>
+        <input type="text" id="dui_maestro" pattern="^\d{8}-\d{1}$" required title="Formato: 00000000-0" />
+
+        <label for="telefono_maestro">Teléfono (ej: 7777-8888):</label>
+        <input type="text" id="telefono_maestro" pattern="^\d{4}-\d{4}$" required title="Formato: 7777-8888" />
+
+        <label for="email_maestro">Correo Electrónico:</label>
+        <input type="email" id="email_maestro" required title="example@mail.com" />
+
+        <label for="especialidad">Especialidad / Materia:</label>
+        <input type="text" id="especialidad" required />
+
+        <label for="grado_asignado">Grado asignado:</label>
+        <select id="grado_asignado" required>
+          <option value="">Seleccione…</option>
+          <option value="Parvularia">Parvularia</option>
+          <option value="Primero">Primero</option>
+          <option value="Segundo">Segundo</option>
+          <option value="Tercero">Tercero</option>
+          <option value="Cuarto">Cuarto</option>
+          <option value="Quinto">Quinto</option>
+          <option value="Sexto">Sexto</option>
+        </select>
+      </div>
+
+      <button type="submit">Registrar</button>
+    </form>
+  </div>
+<script src="/General/registrar.js"></script>
+
+  <script src="registrar.js"></script>
+</body>
+</html>

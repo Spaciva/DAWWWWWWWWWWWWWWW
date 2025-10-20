@@ -1,0 +1,193 @@
+/* ======== ESTILO GENERAL ======== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #e9f0fb;
+  margin: 0;
+  padding: 0;
+  color: #1e293b;
+}
+
+/* ======== ENCABEZADO ======== */
+header {
+  background-color: #4fa4ff; /* Azul institucional */
+  color: white;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#logout-btn {
+  background-color: #ef4444; /* Rojo para cerrar sesión */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#logout-btn:hover {
+  background-color: #dc2626;
+  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3);
+  transform: translateY(-1px);
+}
+
+/* ======== CONTENEDOR PRINCIPAL ======== */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  color: #1e3a8a;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ======== TARJETAS DE MATERIAS ======== */
+#materias-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.2rem;
+}
+
+.materia-card {
+  background-color: #f1f5ff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  text-align: center;
+  padding: 1.2rem 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.materia-card:hover {
+  background-color: #dbeafe;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+  transform: translateY(-2px);
+}
+
+.materia-card h3 {
+  color: #1e40af;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ======== TARJETAS DE NOTAS ======== */
+#notas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.nota-card {
+  background-color: #f8fafc;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.nota-card:hover {
+  background-color: #eef2ff;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.15);
+  transform: translateY(-2px);
+}
+
+.nota-card p {
+  color: #1e3a8a;
+  margin: 0;
+  font-weight: 500;
+}
+
+.nota-card h3 {
+  color: #0f172a;
+  margin: 0.5rem 0 0 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* ======== TARJETA DE PROMEDIO ======== */
+#promedio-card {
+  background-color: #e0e7ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 12px;
+  text-align: center;
+  padding: 1rem;
+  width: fit-content;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 2px 10px rgba(30, 58, 138, 0.15);
+  transition: all 0.3s ease;
+}
+
+#promedio-card:hover {
+  background-color: #c7d2fe;
+  box-shadow: 0 4px 14px rgba(30, 58, 138, 0.2);
+  transform: translateY(-2px);
+}
+
+#promedio-card p {
+  color: #1e3a8a;
+  margin: 0;
+  font-weight: 500;
+}
+
+#promedio-card h3 {
+  color: #0f172a;
+  margin: 0.4rem 0 0 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* ======== BOTÓN VOLVER ======== */
+#volver-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 0.7rem 1.5rem;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+#volver-btn:hover {
+  background-color: #1e40af;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+  transform: translateY(-1px);
+}
+
+/* ======== RESPONSIVO ======== */
+@media (max-width: 600px) {
+  main {
+    padding: 1.5rem;
+  }
+
+  #materias-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+}

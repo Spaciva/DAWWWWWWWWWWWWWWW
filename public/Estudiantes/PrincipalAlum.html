@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumno - Centro Educativo</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="PrincipalAlum.css">
+</head>
+<body>
+  <header>
+    <h1>Bienvenido, <span id="nombre-alumno"></span></h1>
+    <button id="logout-btn">Cerrar sesión</button>
+  </header>
+
+  <main>
+    <!-- Materias -->
+    <section id="materias-section">
+      <h2>Materias</h2>
+      <div id="materias-container"></div>
+    </section>
+
+    <!-- Notas -->
+    <section id="notas-section" style="display:none;">
+      <h2 id="materia-title"></h2>
+
+      <!-- Tarjetas de notas -->
+      <div id="notas-grid">
+        <div class="nota-card"><p>Nota 1</p><h3>9</h3></div>
+        <div class="nota-card"><p>Nota 2</p><h3>8</h3></div>
+        <div class="nota-card"><p>Nota 3</p><h3>8</h3></div>
+        <div class="nota-card"><p>Nota 4</p><h3>9</h3></div>
+      </div>
+
+      <!-- Promedio -->
+      <div id="promedio-card">
+        <p>Promedio</p>
+        <h3>8.5</h3>
+      </div>
+
+      <button id="volver-btn">Volver a materias</button>
+    </section>
+  </main>
+
+  <!-- Script -->
+  <script src="PrincipalAlum.js"></script>
+</body>
+</html>
